@@ -1,0 +1,27 @@
+{
+  "editions": {
+    "full": [
+      {
+        "versionName": "1.0.0",
+        "versionCode": 1000,
+        "date": "2026-11-12",
+        "notes": {
+          "es": [
+            "Primera publicación de ReloquenceTTS versión 1.0.",
+            "Se integró el motor OpenEVV completo con doce idiomas: inglés (EE. UU. y Reino Unido), español (España y Latinoamérica), francés (Francia y Canadá), alemán, italiano, polaco, japonés, finés y portugués (Brasil).",
+            "El español de Latinoamérica se muestra como tal y no como español de México.",
+            "Se eliminó la edición lite: la versión full redujo bastante su tamaño y ya cubre todas las necesidades.",
+            "Las bibliotecas nativas van comprimidas en el APK para que pese lo menos posible."
+          ],
+          "en": [
+            "First release of ReloquenceTTS version 1.0.",
+            "The full OpenEVV engine is integrated with twelve languages: English (US and UK), Spanish (Spain and Latin America), French (France and Canada), German, Italian, Polish, Japanese, Finnish and Portuguese (Brazil).",
+            "Latin American Spanish is shown as such, not as Mexican Spanish.",
+            "The lite edition was removed: the full edition reduced its size considerably and now covers all needs.",
+            "Native libraries are compressed in the APK to keep it as small as possible."
+          ]
+        }
+      }
+    ]
+  }
+}
