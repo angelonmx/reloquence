@@ -12,7 +12,7 @@ jobs:
   build-firmar-publicar:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout del repositorio (incluye el submódulo del motor)
+      - name: Checkout del repositorio (incluye el submódulo del motor OpenEVI)
         uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -97,7 +97,7 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.tag }}
           name: Reloquence ${{ github.event.inputs.tag }}
-          body: "Versión 1.0.0 — ediciones Full y Lite, compiladas y firmadas en GitHub Actions (no en PC local).\n\nIncluye los 10 idiomas del motor y todos los parámetros de voz."
+          body: "Versión 1.0.0 — ediciones Full y Lite, compiladas y firmadas en GitHub Actions (no en PC local).\n\nIncluye los idiomas del motor y todos los parámetros de voz.\n\nFull: com.angelonmx.reloquence\nLite: com.angelonmx.reloquence.lite"
           draft: false
           prerelease: false
           files: |
