@@ -415,3 +415,4 @@ Solo si se pide debug:
 .\gradlew.bat assembleDebug
 .\gradlew.bat installDebug
 ```
+las splits que se crearán serán 3 universal, arm8 y 7. Igual con la versión lite.

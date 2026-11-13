@@ -83,13 +83,23 @@ android {
 	}
 	val fullVersionName = versionProps.getProperty("full.versionName", "1.0.0")
 	val fullVersionCode = versionProps.getProperty("full.versionCode", "1000").toInt()
+	val liteVersionName = versionProps.getProperty("lite.versionName", "1.0.0")
+	val liteVersionCode = versionProps.getProperty("lite.versionCode", "1000").toInt()
+
+	// Edición: "full" (por defecto) o "lite". Se elige con
+	//   -Pevvdroid.edition=lite
+	// y determina el applicationId y la versión que se compilan.
+	val edition = findProperty("evvdroid.edition") as String? ?: "full"
+	val editionApplicationId = if (edition == "lite") "com.angelonmx.reloquence.lite" else "com.angelonmx.reloquence"
+	val editionVersionName = if (edition == "lite") liteVersionName else fullVersionName
+	val editionVersionCode = if (edition == "lite") liteVersionCode else fullVersionCode
 
 	defaultConfig {
-		applicationId = "com.angelonmx.reloquence"
+		applicationId = editionApplicationId
 		minSdk = 23
 		targetSdk = 36
-		versionCode = fullVersionCode
-		versionName = fullVersionName
+		versionCode = editionVersionCode
+		versionName = editionVersionName
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		ndk {
 			abiFilters += abis
